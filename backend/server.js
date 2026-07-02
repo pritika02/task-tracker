@@ -25,6 +25,15 @@ app.use(
   })
 );
 
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get("/", (req, res) => {
   res.json({ success: true, message: "Task Tracker API is running" });
 });
@@ -39,14 +48,13 @@ app.use(notFound);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
+
 if (process.env.VERCEL !== "1") {
   connectDB().then(() => {
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
   });
-} else {
-  connectDB();
 }
 
 module.exports = app;
