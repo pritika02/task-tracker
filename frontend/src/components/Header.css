@@ -1,0 +1,53 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 22px;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-header__mark {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.app-header__brand h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.app-header__stats {
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--slate);
+  flex-wrap: wrap;
+}
+
+.app-header__stat strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.app-header__stat--progress strong {
+  color: #8a6600;
+}
+
+.app-header__stat--done strong {
+  color: var(--teal);
+}
+
+.app-header__stat--overdue strong {
+  color: var(--red);
+}

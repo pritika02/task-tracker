@@ -1,0 +1,29 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 0 16px 60px;
+}
+
+.app-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.load-error {
+  text-align: center;
+  padding: 40px 20px;
+  border: 1px solid var(--red-soft);
+  background: var(--red-soft);
+  border-radius: var(--radius-lg);
+  color: var(--red);
+}
+
+.load-error p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    padding: 0 12px 40px;
+  }
+}
